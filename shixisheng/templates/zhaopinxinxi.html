@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+<!DOCTYPE HTML>
+<html>
+<head>
+{% block css %}
+<meta http-equiv="X-UA-Compatible" content="IE=10;IE=9;IE=8;IE=7;IE=EDGE">
+<meta charset="utf-8">
+<title>{{c.name}}--招聘信息</title>
+<link rel="stylesheet" type="text/css" href="/static/css/grjl/style.css"/>
+<link rel="stylesheet" type="text/css" href="/static/css/hr/style.css"/>
+<script src="/static/js/shapes/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#lo").removeClass("logo").addClass("log");
+    $("#ls").css({'color': '#fff','font-family':" 'Open Sans Condensed',sans-serif",'font-size': '38px','font-weight': '700','position': 'relative','top': '-35px','left':'50px'});
+  });
+</script>
+{% endblock %}
+</head>
+<body>
+  {% block content %}
+    <div style="height:100px"></div>
+
+<div class="content_l"  style="padding-left:20%;width:80%">
+  <dl class="job_detail">
+    <dt class="clearfix">
+      <h1 title="投资经理-北京"> <em></em>
+        <div>{{c.name}}-互联网招聘</div>
+        {{c.position}} </h1>
+      
+    </dt>
+    <dd class="job_request"> <span class="red">{{c.salary}}</span> <span>{{c.place}}</span> <span>{{c.number}}人 </span> <br />
+      <div>发布时间：{{c.date}}</div>
+    </dd>
+    <dd class="job_bt">
+      <h3 class="description">职位描述</h3>
+      <pre><strong>{{c.describe|safe}}</strong></pre>
+      <br />
+      <pre><br /><strong>职位要求:</strong><br />1.2年以上中国风险投资基金或金融机构从业经验，专注于互联网行业；或两年以上中国大型互联网公司投资部门或战略发展部门工作经验。<br />2.一本大学本科以上学历<br />3.流利的英语对话和写作能力<br /><br /><strong>薪资待遇:</strong><br />1.基本工资：税前40万-50万年薪<br />2.浮动奖金和项目分红</pre>
+    </dd>
+    
+  </dl>
+</div>
+<div style="height:110%"></div>
+{% endblock %}
+</body>
+</html>

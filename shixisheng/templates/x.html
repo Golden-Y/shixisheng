@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/css/head/style.css">
+<link rel="stylesheet" href="/static/css/head/bootstrap.min.css">
+<link href="/static/css/head/masterslider.css" rel="stylesheet" media="screen">
+<link href="/static/css/head/styles.css" rel="stylesheet" media="screen">
+
+
+
+</head>
+<body>
+<div class="page-heading center" id="company" style="padding-top:60px;">
+    
+  </div>
+  <div class="ms-partialview-template fullwidth space-top" id="fs-partial-view-info">
+    <div class="master-slider ms-skin-default" id="fs-partial-view">
+     {%for i in t%}
+      <div class="ms-slide"> <img src="" data-src="/media/{{i.img}}" alt="Corporate Blog"/>
+        <div class="ms-info">
+          <h3>{{i.name}}</h3>
+          <p>{{i.intr}}</p>
+          
+        </div>
+      </div>
+    {%endfor%}
+    </div>
+  </div>
+
+
+
+<script src="/static/js/the8guild/jquery-1.11.1.min.js"></script> 
+<script src="/static/js/the8guild/jquery.easing.min.js"></script> 
+<script src="/static/js/the8guild/bootstrap.min.js"></script> 
+<script src="/static/js/the8guild/smoothscroll.js"></script> 
+<script src="/static/js/the8guild/utilities.js"></script> 
+<script src="/static/js/the8guild/foundation.min.js"></script> 
+<script src="/static/js/the8guild/jquery.placeholder.js"></script> 
+<script src="/static/js/the8guild/icheck.min.js"></script> 
+<script src="/static/js/the8guild/jquery.validate.min.js"></script> 
+<script src="/static/js/the8guild/waypoints.min.js"></script> 
+<script src="/static/js/the8guild/isotope.min.js"></script> 
+<script src="/static/js/the8guild/masterslider.min.js"></script> 
+<script src="/static/js/the8guild/owl.carousel.min.js"></script> 
+<script src="/static/js/the8guild/lightGallery.min.js"></script> 
+ 
+<script src="/static/js/the8guild/jquery.parallax.min.js"></script> 
+<script src="/static/js/the8guild/scripts.js"></script>
+</body>
+</html>

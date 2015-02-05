@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link href="/static/css/base/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/base/animate.min.css" rel="stylesheet">
+    <link href="/static/css/base/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/css/sty.css" rel="stylesheet">
+    {%block css%} {%endblock%}
+</head>
+<body>
+	<div class="nav-head" style="background:#ffffff">
+      <!-- Navigation Bar -->
+      <nav class="navbar-default" role="navigation" >
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+              <!-- Logo and Head Text -->
+              <div id = "lo" class="logo">
+                <!-- Logo Icon and Heading -->
+                <img src="/static/images/logo_1.png" class="img-responsive" alt="" />
+              </div>
+            </a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul id = 'u' class="nav navbar-nav navbar-right">
+              <li><a style="color:black" href="/">{{navigation_1.name}}</a></li>
+              <li><a style="color:black" href="/allcompany">{{navigation_2.name}}</a></li>
+              <li><a style="color:black" href="/be">{{navigation_3.name}}</a></li>
+              <li><a style="color:black" href="/youxiu">{{navigation_5.name}}</a></li>
+              <li><a style="color:black" href="/pin.html">{{navigation_6.name}}</a></li>
+              <li><a style="color:black" href="/liucheng">{{navigation_7.name}}</a></li>
+              <li><a style="color:black" href="/faq">{{navigation_8.name}}</a></li>
+              
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div>
+      </nav>
+    </div>
+
+
+
+    {%block content%} {%endblock%}
+
+    <div style="text-align:center;border-radius:5px 5px 5px 5px;background:#FFFAFA;padding-top:20px;padding-bottom:20px;" >
+	  
+	  <span>
+		  QQ  :  张老师：1941847311  |手机：153 1153 1358|座机:010-62231977 </span></p>
+
+	  <span>  地址：北京市 昌平区 科星西路 国风美唐 5号楼 806
+	  </span></p>
+	  
+	  <span>Copyright © 2008-2014 智普. All rights reserved </span> </p>
+	  <span>北京顶嵌开源科技有限公司</span>
+</div>
+
+	<script src="/static/js/base/jquery.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/static/js/base/bootstrap.min.js"></script>
+</body>
+</html>

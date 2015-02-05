@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+  {% block css %}
+  <link rel="stylesheet" href="/static/css/zhaopin/style.css">
+  <link rel="stylesheet" href="/static/css/zhaopin/bootstrap.min.css">
+  <title>{{navigation_7.name}}</title>
+  <link href="/static/css/zhaopin/jianli-post_v0.css" rel="stylesheet" />
+
+  <script src="/static/js/tinymce_4.1.7/tinymce/js/tinymce/tinymce.min.js"></script>
+  <script>tinymce.init({selector:'textarea'});</script>
+  {% endblock %}
+</head>
+<body>
+  {% block content %}
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <section>
+    <body class="postFirPage">
+      <div style="height:60px;"></div>
+      <div class="logHeader" id="" style="margin-top:0px;">
+        <div id="" class="loginName">
+          <span class="btn btn-warning">正在创建简历</span>
+        </div>
+      </div>
+      <div class="infoContent">
+        <form action="/jltj" method="POST">
+          {%csrf_token%}
+          <div class="perIcon perIcon5" style="display:none"></div>
+          <dl class="">
+            <dt>
+              姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名
+              <b>*</b>
+            </dt>
+            <dd>
+              <input type="text" name="name" value="{{xingming}}"/> 
+           
+          <div class="radio" style=" position: absolute;left: 200px;top: -13px;">
+            <label>
+              <input type="radio" name="xingbie" id="xingbie1" value="男" checked>
+              男
+            </label>
+            <label>
+              <input type="radio" name="xingbie" id="xingbie2" value="女">
+              女
+            </label>
+           </dd>
+           {{a}}
+          </dl>
+          <dl class="jobType ">
+            <dt>
+              专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业
+              <b>*</b>
+            </dt>
+            <dd class="" style=""><!--class="zIndex999"-->
+              <input type="text" name="zhuanye" value="{{zhuanye}}"/> 
+            </dd>
+            {{b}}
+          </dl>
+          <dl class="expSalary ">
+            <dt>
+              期望薪资
+              <b>*</b>
+            </dt>
+            <dd class="">
+
+              <input type="text" name="xinzi" value="2500-3000"></input>
+
+            </dd>
+            {{c}}
+          </dl>
+          <dl class="nameSex ">
+            <dt>
+              工作地点
+              <b>*</b>
+            </dt>
+            <dd class="">
+              <input type="text" name="didian" value="北京"></input>
+            </dd>
+            {{d}}
+          </dl>
+          <dl class="birTime">
+            <dt>
+              联系方式
+              <b>*</b>
+            </dt>
+            <dd class="">
+              <input type="text" name="lianxi" value="{{lianxi}}"></input>
+            </dd>
+            {{e}}
+          </dl>
+          <dl class="">
+            <dt>
+              学历/年级
+              <b>*</b>
+            </dt>
+            <dd class="">
+              <input type="text" name="nianji" value="{{nianji}}"></input>
+            </dd>
+          </dl>
+          <dl class="">
+            <dt class="">
+              自我介绍
+              <b>*</b>
+            </dt>
+            <dd class="">
+              <textarea name= "jieshao"></textarea>
+            </dd>
+          </dl>
+          <div class="subBtnCon ">
+          <input class="saveResume postBtn" id="btninfo" value="提交信息" type="submit" />
+          </div>
+        </form>
+      </div>
+    </body>
+  </section>
+{% endblock %}
+</body>
+</html>

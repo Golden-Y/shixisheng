@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=10;IE=9;IE=8;IE=7;IE=EDGE">
+
+
+{% block css %}
+<meta charset="utf-8">
+<title>{{s.name}}--个人简历</title>
+
+
+<link rel="Shortcut Icon" href="static/images/assets/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/static/css/grjl/style.css"/>
+<link rel="stylesheet" type="text/css" href="/static/css/hr/style.css"/>
+<link rel="stylesheet" type="text/css" href="/static/css/grjl/myresume.css"/>
+<script src="/static/js/shapes/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#lo").removeClass("logo").addClass("log");
+    $("#ls").css({'color': '#fff','font-family':" 'Open Sans Condensed',sans-serif",'font-size': '38px','font-weight': '700','position': 'relative','top': '-35px','left':'50px'});
+  });
+</script>
+{%endblock%}
+</head>
+<body>
+  {% block content %}
+    <div style="height:100px"></div>
+<div id="body">
+<div class="mr_created mr_preview">
+  <div class="mr_myresume_l mrcenter">
+    <div id="mr_mr_head">
+      <div class="mr_top_bg" id="baseinfo"> <img src="/static/images/default_headpic.png" alt="" /> <img src="/static/images/tou.png" class="opa" alt="" /> <img src="/static/images/shadow_tx.png" alt="" class="shadow"/> </div>
+      <div class="mr_baseinfo"> <i class="mr_left_bg"></i> <i class="mr_right_bg"></i>
+        <div class="mr_p_name mr_w604 clearfixs"> <span class="mr_name"> {{s.name}} </span> </div>
+        
+        <div class="mr_p_info mr_infoed mr_w604 clearfixs">
+          <div class="info_t"> 
+            <span  class=""> <i></i> 
+            <em class="s">适合职位：</em><em style="color:red;">{{s.position}}</em> 
+          </span> 
+          <span class=""><i></i>
+            <em class="s">年级：</em><em class="x">{{s.grade}}</em>
+          </span> 
+          <span class=""><i></i>
+            <em class="s">期望工作地点：</em><em class="x">{{s.place}}</em>
+          </span> 
+        </div>
+          <div class="info_b"> <span class=""><i></i>联系方式：<em> {{s.contact}} </em></span> <span class=""><i></i>期望薪资：<em> {{s.salary}} </em></span> </div>
+          <div  class="mr_sns dn"> </div>
+        </div>
+      </div>
+    </div>
+    <div class="mr_content">
+      <div class="mr_w604">
+        <div id="educationalBackground">
+          <div>
+            <div class="mr_moudle_head clearfixs">
+              <div class="mr_head_l">
+                <div class="mr_title"> <span class="mr_title_l"></span><span class="mr_title_c">自我介绍</span><span class="mr_title_r"></span> </div>
+              </div>
+            </div>
+            <div class="mr_moudle_content">
+              <div class="clearfixs mb46 mr_jobe_list">
+                <div class="mr_content_l">
+                  <div class="l2">
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;{{s.intr|safe}}</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mr_self_state"> 
+        <div class="form_wrap mr_self_s resume_status"> ·&nbsp;选我！选我！&nbsp;· </div>
+      </div>
+    </div>
+    <div class="mr_bottom_r" id="mr_pre_bot"> <span>© {{s.name}}  简历创建于{{s.date}} Powered by shixisheng.cc</span> </div>
+    
+  </div>
+</div>
+{% endblock %}
+</body>
+</html>

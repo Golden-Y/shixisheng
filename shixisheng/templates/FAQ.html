@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+  {% block css %}
+  <meta charset="utf-8">
+  <title>{{navigation_8.name}}</title>
+<!-- Bootstrap Themes -->
+<link href="static/css/allcom/lightGreen-blueGrey-b.css" rel="stylesheet" id="bootstrapTheme">
+<link href="static/css/allcom/lightGreen-blueGrey-m.css" rel="stylesheet" id="mainTheme">
+{% endblock %}
+</head>
+<body>
+  {% block content %}
+<div style="height:150px"></div>
+<!-- FAQ -->
+<h3 class="lg-title">{{navigation_8.name}}</h3>
+<p class="subtitle-v2 ">{{navigation_8.intr}}</p>
+<div class="panel-group" id="accordion">
+  {%for i in p%}
+  <div class="panel panel-default"> <a data-toggle="collapse" data-parent="#accordion" href="#{{i.id}}">
+    <div class="panel-heading">
+      <h4 class="panel-title"><i class="fa fa-user"></i>{{i.problem}}</h4>
+    </div>
+    </a>
+    <div id="{{i.id}}" class="panel-collapse collapse">
+      <div class="panel-body">
+        <h5 class="title-sm-v2">{{i.answer|linebreaks}}</h5>
+      </div>
+    </div>
+  </div>
+  {%endfor%}
+  <div class="panel panel-default"> <a data-toggle="collapse" data-parent="#accordion" href="#c2">
+    <div class="panel-heading">
+      <h4 class="panel-title"><i class="fa fa-lock"></i>Safety & Security</h4>
+    </div>
+    </a>
+    <div id="c2" class="panel-collapse collapse">
+      <div class="panel-body">
+        <h5 class="title-sm-v2">Anim pariatur cliche, enim eiusmod high life?</h5>
+        <p class="text-muted">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.</p>
+        <ol>
+          <li>Anderson cred nesciunt.</li>
+          <li>Anderson cred nesciunt.</li>
+          <li>Anderson cred nesciunt.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default"> <a data-toggle="collapse" data-parent="#accordion" href="#c3">
+    <div class="panel-heading">
+      <h4 class="panel-title"><i class="fa fa-phone"></i>Mobile & Apps</h4>
+    </div>
+    </a>
+    <div id="c3" class="panel-collapse collapse">
+      <div class="panel-body">
+        <h5 class="title-sm-v2">Anim pariatur cliche, enim eiusmod high life?</h5>
+        <span class="text-muted">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.</span>
+        <div class="space-sm"></div>
+        <h5 class="title-sm-v2">Anim pariatur cliche, enim eiusmod high life?</h5>
+        <span class="text-muted">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.</span> </div>
+    </div>
+  </div>
+  <div class="panel panel-default"> <a data-toggle="collapse" data-parent="#accordion" href="#c5">
+    <div class="panel-heading">
+      <h4 class="panel-title"><i class="fa fa-credit-card"></i>Billing information</h4>
+    </div>
+    </a>
+    <div id="c5" class="panel-collapse collapse">
+      <div class="panel-body">
+        <h5 class="title-sm-v2">Anim pariatur cliche, enim eiusmod high life?</h5>
+        <span class="text-muted">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.</span>
+        <div class="space-sm"></div>
+        <h5 class="title-sm-v2">Anim pariatur cliche, enim eiusmod high life?</h5>
+        <span class="text-muted">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.</span> </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<!--=== SCRIPTS ===--> 
+
+<!-- JQUERY -->
+{% endblock %}
+</html>

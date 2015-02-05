@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+
+{% block css %}
+<title>实习流程</title>
+		<link href="/static/css/liucheng/style.css" rel="stylesheet" type="text/css"  />
+    <script src="/static/css/liucheng/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $("#u").removeClass("nav navbar-nav navbar-right").addClass("navbar-nav navbar-right");
+    $("#ls").css({'top': '-15px'});
+  });
+</script>
+    {% endblock %}
+
+
+<body>
+  {% block content %}
+
+
+	
+		  <div class="about" id="about">
+		  	<div class="wrap">
+		  		<h3>实习流程</h3>
+		  		<p class="a">sdfgsdfgsdfgsdfg</p>
+				<div class="about-time-line">
+				{%for i in p%}
+					<li>
+							<div class="{%  cycle 'cbp_tmicon img1' 'cbp_tmicon1 img2' 'cbp_tmicon2 img3' 'cbp_tmicon3 img4' 'cbp_tmicon4 img5' %}" > 
+							<img src="/media/{{i.img}}">
+
+							</div>
+							<div class="{%  cycle 'cbp_tmlabel' 'cbp_tmlabel cbp_tmlabel1' %}">
+								<h2>{{i.name}}</h2>
+								<p>{{i.intr}}</p>
+							</div>
+					</li>
+				{%endfor%}
+					
+					<div class="clear"> </div>
+   		   </div>
+         <div style="padding-top:50px;">
+   		   					<button style="font-size:15pt;width:10;height:50;background:#654EF2;display: block;margin:0 auto;color: #ffffff;padding: 18px 40px;font-style:normal;font-family:幼圆; border-radius:100px;-webkit-border-radius:100px;-moz-border-radius:50px; outline:none; "  onclick="window.location.href='jianli'">创建简历</button>
+                </div>
+   		 </div>    
+   		</div>
+{% endblock %}
+   	
+</body>
+</html>

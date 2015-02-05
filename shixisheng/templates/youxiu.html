@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html >
+<head>
+    <!-- Title here -->
+    
+    <!-- Description, Keywords and Author -->
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your,Keywords">
+    <meta name="author" content="ResponsiveWebInc">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+
+    {% block css %}
+    <title>{{navigation_5.name}}</title>
+    <link href="static/css/youxiu/youxiu.css" rel="stylesheet">
+    {% endblock %}
+    <!-- Styles -->
+   
+</head>
+{% block content %}
+<body style="background:#FFC1C1">
+    <div style="height:100px;"></div>
+    <div>
+        <h1>{{navigation_5.name}}</h1>
+    	<h4>{{navigation_5.intr}}</h4>
+    </div>
+    <div class="container">
+        {%for i in stu%}
+		    <div class="row top" style="  border-radius:15px 15px 15px 15px;" onClick="window.open('grjl/{{i.id}}')">
+                <div class="hl col-xs-1" style="background:#FF3E96;margin : 5px 0px 0px 50px;"><h3>{{i.level}}</h3></div>
+                <div class="tl col-xs-9" style="background:#FFE4E1;margin : 0px 0px 0px 10px;">
+                <div class="col-md-3">
+                    <h5>{{i.position}}</h5></div>
+
+                      <div class="col-md-3">
+                    <h5>{{i.name}}</h5></div>
+
+                      <div class="col-md-3">
+		                <h5>{{i.place}}</h5></div>
+                      <div class="col-md-3" >
+		                <h5>{{i.salary}}</h5>
+                </div>
+              </div>
+		    </div>
+      {%endfor%}
+	</div>
+
+  </body>
+{% endblock %}
+</html>

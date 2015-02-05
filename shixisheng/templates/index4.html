@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+	<!-- ==============================================
+	Title and Meta Tags
+	=============================================== -->
+	<meta charset="utf-8">
+	<title>实习生</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- ==============================================
+	Favicons
+	=============================================== -->
+	<link rel="shortcut icon" href="/static/images/assets/favicon.ico">
+	<link rel="apple-touch-icon" href="/static/images/assets/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/static/images/assets/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/static/images/assets/apple-touch-icon-114x114.png">
+		
+	<!-- ==============================================
+	CSS
+	=============================================== -->    
+	<link rel="stylesheet" href="/static/css/shapes/bootstrap.min.css">
+	<link rel="stylesheet" href="/static/css/shapes/font-awesome-4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/static/css/shapes/flexslider.css">
+	<link id="main" rel="stylesheet" href="/static/css/shapes/shapes-blue.css">
+	<link id="theme" rel="stylesheet" href="/static/css/shapes/color/shapes-blue.css">
+	<link rel="stylesheet" href="/static/css/shapes/style-switcher.css">
+		
+	<!-- ==============================================
+	Fonts
+	=============================================== -->
+	<!-- ==============================================
+	JS
+	=============================================== -->
+			
+	<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+		
+	<script type="text/javascript" src="/static/js/shapes/modernizr.min.js"></script>
+	<script>
+	function SetWinHeight2(obj,x) 
+	{ 
+		var win=obj; 
+		if (document.getElementById) 
+		{ 
+			if (win && !window.opera) 
+			{ 
+				if (win.contentDocument && win.contentDocument.body.offsetHeight) 
+				win.height = win.contentDocument.body.offsetHeight+x; 
+				else if(win.Document && win.Document.body.scrollHeight) 
+				win.height = win.Document.body.scrollHeight+x; 
+			} 
+		} 
+	} 
+    </script>
+		
+		
+</head>
+  
+<body data-spy="scroll" data-target="#main-nav" data-offset="400">
+	
+	<!--=== PAGE PRELOADER ===-->
+	<div id="page-loader"><h1 class='loader-logo'>{{head_name_1.name}}<span> / {{head_name_2.name}}</span></h1><span class="page-loader-gif"></span></div>
+		
+	<!--=== BACKGROUND ===-->
+	<div id="backgrounds" data-backgrounds="/static/images/back_img_1.jpg,/static/images/back_img_2.jpg,/static/images/back_img_3.jpg"></div>
+	<div id="color-overlay"></div>
+	
+	<!-- ==============================================
+	MAIN NAV
+	=============================================== -->
+	<div id="main-nav" class="navbar navbar-fixed-top" style="background:#FFFAFA;">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav">
+					<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+				<!-- ======= LOGO ========-->
+				<a class="navbar-brand scrollto" href="#home"><img src="/static/images/logo_1.png"><img></a>
+				<!-- <a class="navbar-brand scrollto ir-logo" href="#home">SHAPES<span> / Creative Studio</span></a> -->
+			</div>
+			<div id="site-nav" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="sr-only">
+						<a href="#home" class="scrollto">{{navigation_1.name}}</a>
+					</li>
+					<li>
+						<a href="#portfolio" class="scrollto">{{navigation_2.name}}</a>
+					</li>
+					<li>
+						<a href="#services" class="scrollto">{{navigation_3.name}}</a>
+					</li>
+					<li>
+						<a href="#testimonials" class="scrollto">{{navigation_4.name}}</a>
+					</li>
+					<li>
+						<a href="#about" class="scrollto">{{navigation_5.name}}</a>
+					</li>
+					<li>
+						<a href="" onClick="window.open('pin.html')" class="scrollto">{{navigation_6.name}}</a>
+					</li>
+					<li>
+						<a href="" onClick="window.open('liucheng')" class="scrollto">{{navigation_7.name}}</a>
+					</li>
+					<li>
+						<a href="" onClick="window.open('faq')" class="scrollto">{{navigation_8.name}}</a>
+					</li>
+				</ul>
+			</div><!--End navbar-collapse -->
+		</div><!--End container -->
+	</div><!--End main-nav -->
+	<!-- ==============================================
+	HEADER
+	=============================================== -->
+	<header id="home" class="">
+		<div class="">
+
+			<iframe width="100%" align="center" height="" id="win" name="win" onload="Javascript:SetWinHeight2(this,550)" frameborder="0" src="x"></iframe>
+		</div><!--End container -->
+	</header><!--End header -->
+		
+	<!-- ==============================================
+	PORTFOLIO
+	=============================================== -->		
+	<section  id="portfolio">
+		<div class="bg-light"><!--Start portfolio header -->
+			<div class="container">
+				<div class="section-header scrollimation fade-up">
+					<div class="section-icon"><i class="fa fa-suitcase"></i></div>
+					<h1 class="section-title">{{navigation_2.name}}</h1>
+					<p class="section-description lead"> {{navigation_2.intr}}</p>
+				</div><!--End section-header -->
+				<!--==== Portfolio Filters ====-->
+				<div id="filter-works" class="scrollimation fade-in">
+					<ul data-filter="category">
+						<li class="active">
+							<a href="#" data-category="*">All Categories</a>
+						</li>
+						<li>
+							<a href="#" data-category=".互联网">互联网</a>
+						</li>
+						<li>
+							<a href="#" data-category=".apps">Apps</a>
+						</li>
+						<li>
+							<a href="#" data-category=".ui-kits">UI Kits</a>
+						</li>
+					</ul>
+				</div><!--End portfolio filters -->
+				<p class="filter-results text-center"><span></span> Works match criteria</p>
+			</div><!--End container -->
+		</div><!--End portfolio header -->
+		<!--==== Project Preview Panel (DO NOT REMOVE)====-->
+		<div id="preview-scroll"></div>
+		<div id="preview-loader"></div>
+		<div id="project-preview-wrapper">
+		<div id="project-preview">
+		<div class="container">
+		<div class="preview-header">
+			<h1 class="preview-title"></h1><span class="close-preview"><i class="fa fa-times"></i></span>
+		</div>
+		<div class="row">
+			<div id="preview-media" class="col-md-8"></div>
+			<div id="preview-details" class="col-md-4">
+				<h2>Company Details</h2>
+				<ul></ul>
+			</div>
+		</div>
+		<div id="preview-content" class="row"></div>
+		</div><!--End container -->
+		</div><!--End #project-preview panel-->
+		</div><!--End #project-preview-wrapper-->
+		<div class="padding-bottom bg-light"><!--Start Projects Band-->
+			
+				<div class="container masonry-wrapper">
+				
+					<div id="projects-container" class="">					
+						{%for i in company%}
+						<article class="project-item ui-kits apps gallery y2013">
+							<a href="#">
+								<img class="img-responsive project-thumb" src="media/{{i.log}}" alt=""><!--Project thumb -->
+								
+								<div class="details">
+									<h3 class="project-title">{{i.name}}</h3><!--Project Title -->
+									<small>{{i.categories}}</small><!--Project Categories -->
+								</div>
+							</a>
+							<!--==== Project Preview ====-->
+							<div class="sr-only">
+								<div class="project-media" data-images="media/{{i.img}},media/{{i.img2}}" ></div>
+								<div class="project-attributes">
+									<div class="newline"><span>Position : </span>{{i.position}}</div>
+									<div class="newline"><span>Salary : </span>{{i.salary}}</div>
+									<div class="newline"><span>Place : </span>{{i.place}}</div>
+									<div class="newline"><span>Number : </span>{{i.number}}</div>
+								</div>
+							
+								<div class="project-description">
+								
+									<div class="col-md-12">
+										<h2>Post information</h2>
+										<p>{{i.describe}}</p>
+									</div>
+									
+								</div>
+							</div><!-- End Project Preview -->
+							
+						</article>
+						{%endfor%}
+						
+						
+						<article class="project-item web-design ui-kits gallery y2012">
+							<a href="#">
+								<img class="img-responsive project-thumb" src="http://q-themes.net/themes/shapes/assets/projects/own-the-nigh.jpg"  alt=""><!--Project thumb -->
+								
+								<div class="details">
+									<h3 class="project-title">Own the Night</h3><!--Project Title -->
+									<small>Web design, Gallery</small><!--Project Categories -->
+								</div>
+							</a>
+							<!--==== Project Preview ====-->
+							<div class="sr-only">
+								<div class="project-media" data-images="http://q-themes.net/themes/shapes/assets/projects/own-the-nigh-full1.jpg,http://q-themes.net/themes/shapes/assets/projects/own-the-nigh-full2.jpg"></div>
+								<div class="project-attributes">
+									<div class="newline"><span>Date : </span>November 2012</div>
+									<div class="newline"><span>Client : </span>Company SA</div>
+									<div class="newline"><span>Categories : </span>Web Design, UI Kits</div>
+									<div class="newline"><span>Website : </span><a href="#link">www.example.com</a></div>
+								</div>
+							
+								<div class="project-description">
+								
+									<div class="col-md-4">
+										<h2>The Challenge</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+									</div>
+									
+									<div class="col-md-4">
+										<h2>The Solution</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+									</div>
+									
+									<div class="col-md-4">
+										<h2>The Result</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+									</div>
+									
+								</div>
+							</div><!-- End Project Preview -->
+							
+						</article>
+						
+						
+		
+						<article class="project-item apps image y2011">
+							<a href="#">
+								<img class="img-responsive project-thumb" src="http://q-themes.net/themes/shapes/assets/projects/owzzup.jpg"  alt=""><!--Project thumb -->
+								
+								<div class="details">
+									<h3 class="project-title">Owzzup</h3><!--Project Title -->
+									<small>Apps, Image</small><!--Project Categories -->
+								</div>
+							</a>
+							<!--==== Project Preview ====-->
+							<div class="sr-only">
+								<div class="project-media" data-images="http://q-themes.net/themes/shapes/assets/projects/owzzup-full.jpg"></div>
+								<div class="project-attributes">
+									<div class="newline"><span>Date : </span>April 2011</div>
+									<div class="newline"><span>Client : </span>Google Inc.</div>
+									<div class="newline"><span>Categories : </span>Apps</div>
+									<div class="newline"><span>Website : </span><a href="#link">www.example.com</a></div>
+								</div>
+							
+								<div class="project-description">
+								
+									<div class="col-md-12">
+										<h2>The Challenge</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+									</div>
+									
+								</div>
+							</div><!-- End Project Preview -->
+							
+						</article>
+						
+					</div><!-- End #projects-container --> 
+					
+				</div><!-- End container --> 
+				
+				<div class="container">
+					<br/>
+					<p class="lead text-center scrollimation fade-in">想要了解更多的<span class="primary">合作企业!</span></p>
+					<p class="text-center scrollimation scale-in"><a class="btn btn-theme btn-lg scrollto" href="" onClick="window.open('allcompany')">更多</a></p>
+					
+				</div>
+			</div><!--End Projects Band-->
+			
+	</section><!-- End portfolio section -->
+
+		
+		
+	<!-- ==============================================
+	=============================================== -->			
+	<section id="social-links" class="bg-transparent">
+		
+			<div class="container">
+				<ul>
+					<li class="scrollimation fade-right">
+						<a href="#ll" class="icon"><i class="fa fa-hand-o-right"></i></a>
+						<h4></h4>
+					</li>
+					<li class="scrollimation fade-up">
+						<a href="#ll" class="icon"><i class="fa fa-hand-o-up"></i></a>
+						<h4></h4>
+					</li>
+					<li class="scrollimation fade-left">
+						<a href="#ll" class="icon"><i class="fa fa-hand-o-left"></i></a>
+						<h4></h4>
+					</li>
+					
+				</ul>
+					
+			</div><!--End container -->
+			
+	</section><!--End Call to Action -->
+
+	<!-- ==============================================
+	SERVICES
+	=============================================== -->
+	<section id="services" class="padding-bottom bg-light">
+		
+			<div class="container">
+					
+				<div class="section-header scrollimation fade-up">
+				
+					<div class="section-icon"><i class="fa fa-wrench"></i></div>
+				
+					<h1 class="section-title">{{navigation_3.name}}</h1>
+					
+					<p class="section-description lead">{{navigation_3.intr}}</p>
+					
+				</div><!--End section-header -->
+			
+				<div class="row">
+					
+						<iframe width="100%" align="center" height="" id="win" name="win" onload="Javascript:SetWinHeight2(this,400)" frameborder="0" src="old.html"></iframe>
+						
+					</div><!--End row -->
+						
+				<br/>
+				<p class="lead text-center scrollimation fade-in">想要看到更多关于实习的照片吗.</p>
+				<p class="text-center scrollimation scale-in"><a class="btn btn-theme btn-lg scrollto" href="" onClick="window.open('be')">更多</a></p>
+				
+			</div><!--End container -->
+			
+	</section><!--End services section-->
+			
+	<!-- ==============================================
+	TESTIMONIALS
+	=============================================== -->	
+	<section id="testimonials" class="bg-transparent">
+		
+			<div class="container scrollimation fade-left">
+			
+				<div class="quote-icon"><!-- Testimonials Icon -->
+					<i class="fa fa-users fa-2x"></i>
+				</div>
+				
+				<div class="row">
+				
+					<div class="col-sm-8 col-sm-offset-2">
+					
+						<div id="testimonials-slider" class="flexslider">
+						
+							<ul class="slides">
+								<!--Single Testimonial-->
+								{%for i in teacher%}
+								<li>
+									<p class="testimonial">{{i.intr}}</p>
+									<img class="client-img img-circle" src="/media/{{i.img}}" alt="" style="height:80px;width:80px"/>
+									<p class="client">{{i.name}} / <span>{{i.company}}</span></p>
+								</li><!--End Single Testimonial-->
+								{%endfor%}
+								<li>
+									<p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor.</p>
+									<img class="client-img img-circle" src="http://q-themes.net/themes/shapes/assets/client2.jpg" alt="" />
+									<p class="client">John Doe / <span>Microsoft</span></p>
+								</li>
+								<li>
+									<p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor.</p>
+									<img class="client-img img-circle" src="http://q-themes.net/themes/shapes/assets/client3.jpg" alt="" />
+									<p class="client">John Doe / <span>Amazon</span></p>
+								</li>
+							</ul>
+							
+						</div><!-- End slider -->
+						
+					</div><!-- End col -->
+
+				</div><!-- End row -->
+				
+			</div><!-- End container -->
+			
+	</section><!-- End Testimonials section -->
+		
+	<!-- ==============================================
+	ABOUT
+	=============================================== -->
+	<section id="about" class="padding-bottom bg-light">
+		
+			<div class="container">
+					
+				<div class="section-header scrollimation fade-up">
+				
+					<div class="section-icon"><i class="fa fa-users"></i></div>
+				
+					<h1 class="section-title">{{navigation_5.name}}</h1>
+					
+					<p class="section-description lead">{{navigation_5.intr}}</p>
+					
+				</div><!--End section-header -->
+			
+				<div class="row">
+					
+					<iframe width="100%" align="center" height="" id="win" name="win" onload="Javascript:SetWinHeight2(this,380)" frameborder="0" src="third.html"></iframe>
+				</div><!--End row -->
+				
+			</div><!--End container -->
+			<div class="container">
+					<br/>
+					<p class="lead text-center scrollimation fade-in">想要了解更多的 <span class="primary">优秀实习生!</span></p>
+					<p class="text-center scrollimation scale-in"><a class="btn btn-theme btn-lg scrollto" href="" onClick="window.open('youxiu')">更多</a></p>
+					
+				</div>
+			
+	</section><!--End about section-->
+	
+	<!-- ==============================================
+	=============================================== -->	
+	<section id="social-links" class="bg-transparent">
+		
+			<div class="container">
+				<ul>
+					<li class="scrollimation fade-right">
+						<a href="#ll" class="icon"><i class="fa fa-hand-o-right"></i></a>
+						<h4></h4>
+					</li>
+					<li class="scrollimation fade-up">
+						<a href="#ll" class="icon"><i class="fa fa-hand-o-up"></i></a>
+						<h4></h4>
+					</li>
+					<li class="scrollimation fade-left">
+						<a href="#ll" class="icon"><i class="fa fa-hand-o-left"></i></a>
+						<h4></h4>
+					</li>
+					
+				</ul>
+					
+			</div><!--End container -->
+			
+	</section><!--End skills section -->
+
+		
+		
+	<!-- ==============================================
+	FOOTER
+	=============================================== -->	
+	<footer id="main-footer">
+		
+			<div class="container">
+			
+				<div class="row">
+				
+					<div class="col-sm-6 left-col">
+						<p><span>{{head_name_1.name}}</span> &copy;Copyright 2015 / All Rights Reserved</p>
+					</div>
+					
+					<div class="col-sm-6 right-col">
+						
+						<ul class="footer-nav">
+							<li><a class="scrollto" href="#home">{{navigation_1.name}}</a></li>
+							<li><a class="scrollto" href="#portfolio">{{navigation_2.name}}</a></li>
+							<li><a class="scrollto" href="#services">{{navigation_3.name}}</a></li>
+							
+							<li><a class="scrollto" href="#testimonials">{{navigation_4.name}}</a></li>
+						</ul>
+						
+					</div>
+					
+				</div><!-- End row -->
+
+				
+			</div><!-- End container -->
+			
+	</footer><!-- End footer -->
+		
+		
+
+
+
+	<!-- ==============================================
+	SCRIPTS
+	=============================================== -->	
+	<script src="/static/js/shapes/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/static/js/shapes/jquery-1.8.2.min.js">\x3C/script>')</script>
+	<script src="/static/js/shapes/bootstrap.min.js"></script>
+	<script src='/static/js/shapes/jquery.scrollto.js'></script>
+	<script src='/static/js/shapes/jquery.flexslider.min.js'></script>
+	<script src='/static/js/shapes/twitterFetcher.js'></script>
+	<script src='/static/js/shapes/jquery.fitvids.js'></script>
+	<script src='/static/js/shapes/jquery.masonry.min.js'></script>
+	<script src="/static/js/shapes/waypoints.min.js"></script>
+	<script src="/static/js/shapes/jquery.backstretch.min.js"></script>
+	<script src="/static/js/shapes/contact.js"></script>
+	<script src="/static/js/shapes/shapes.js"></script>
+	<script src="/static/js/shapes/style-switcher.js"></script>
+
+	<!--Style Switcher-->
+	<div id="style-switcher">
+		<div id="toggle-switcher"><i class="fa fa-cogs"></i></div>
+		<h3>Toggle Overlay</h3>
+		<a class="toggle-overlay" href="#">ON</a>
+		<h1>Change Color</h1>
+		<ul>
+			<li id="blue"></li>
+			<li id="light-blue"></li>
+			<li id="green"></li>
+			<li id="grass"></li>
+			<li id="red"></li>
+			<li id="orange"></li>
+			<li id="sepia"></li>
+			<li id="yellow"></li>
+			<li id="purple"></li>
+			<li id="pink"></li>
+		</ul>
+	</div><!--End Style Switcher-->
+		
+</body>
+	
+</html>

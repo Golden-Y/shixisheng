@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    {%block css%}
+    <title>{{navigation_3.name}}</title>
+    <link rel="stylesheet" media="all" href="/media/cssmoban/css/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!-- JS -->
+    <script src="/media/cssmoban/js/jquery-1.6.4.min.js"></script>
+    <script src="/media/cssmoban/js/css3-mediaqueries.js"></script>
+    <script src="/media/cssmoban/js/custom.js"></script>
+    <script src="/media/cssmoban/js/tabs.js"></script>
+    <!-- ENDS Tweet -->
+    
+    <!-- superfish -->
+    <link rel="stylesheet" media="screen" href="/media/cssmoban/css/superfish.css" /> 
+    <script  src="/media/cssmoban/js/superfish-1.4.8/js/hoverIntent.js"></script>
+    <script  src="/media/cssmoban/js/superfish-1.4.8/js/superfish.js"></script>
+    <script  src="/media/cssmoban/js/superfish-1.4.8/js/supersubs.js"></script>
+    <!-- ENDS superfish -->
+    
+
+    
+    
+    
+    <!-- Flex Slider -->
+    <link rel="stylesheet" href="/media/cssmoban/css/flexslider.css" >
+    <script src="/media/cssmoban/js/jquery.flexslider-min.js"></script>
+    <!-- ENDS Flex Slider -->
+    
+    <!-- Less framework -->
+    <link rel="stylesheet" media="all" href="/media/cssmoban/css/lessframework.css"/>
+    
+    <!-- modernizr -->
+    <script src="/media/cssmoban/js/modernizr.js"></script>
+    
+    <!-- SKIN -->
+    <link rel="stylesheet" media="all" href="/media/cssmoban/css/skin.css"/>
+     {%endblock%}
+</head>
+<body>
+  {%block content%}
+
+    <div style="height:100px;"></div>
+  <div id="main" style="padding-top:50px;">  
+      <div class="wrapper">
+
+        <!-- slider holder -->
+        <div id="slider-holder" class="clearfix">
+          
+          <!-- slider -->
+              <div class="flexslider home-slider">
+            <ul class="slides">
+
+              <li style="width: 100%; float: left; margin-right: -100%">
+                <img id='pic' src="/media/{{s.Img}}" height="305" width="620" alt="alt text">
+              </li>
+          {%for x in s1%}
+              <li style="width: 100%; float: left; margin-right: -100%;">
+                <img id='pic' src="/media/{{x.Img}}" height="305" width="620" alt="alt text">
+                <p class="flex-caption">{{x.Name}}</p>
+              </li>
+          {%endfor%}
+          <ul class="flex-direction-nav"><li><a class="prev" href="#">前一个</a></li><li><a class="next" href="#">下一个</a></li></ul></div>
+              <!-- ENDS slider -->
+              
+              <div class="home-slider-clearfix "></div>
+              
+              <!-- Headline -->
+              <div id="headline" style="height:365px;width:300px;">
+                <h1 style="font-size:33px">{{s.Name}}</h1>
+                <p>培训内容：{{s.Course}}</p>
+                <p>欢迎访问《{{s.Name}}》学员的项目<a href="{{s.project_link}}" style="color:#e74b84; font-size:22px;">{{s.project_name}}</a>。</p>
+                <em id="corner"></em>
+              </div>
+              <!-- ENDS headline -->
+<style type="text/css">
+p{font-size: 20px; }
+#pic{margin:0 auto; width:620px; padding:0;}
+#pic img{max-width:620px;width:expression(document.body.clientWidth > 620? "620px": "auto");border:1px dashed #000;
+
+}
+
+
+</style>              
+              
+        </div>
+        <!-- ENDS slider holder -->
+        <h2 class="home-block-heading"><span>项目介绍</span></h2>
+              <div class="one-third-thumbs clearfix" style="margin-bottom: 50px;">
+              <h4>{{s.project_text|linebreaks}}</h4>
+        </div>
+        <!-- home-block -->
+        {%if s2%}
+            <div class="home-block">
+              <h2 class="home-block-heading"><span>生活的颜色</span></h2>
+              <div class="one-third-thumbs clearfix">
+              {%for x in s2%}
+                <figure  {%  cycle  '' '' 'class="last"' %}>
+                  <figcaption>
+                    <strong>{{x.Name}}</strong>
+                    <span>{{x.Text}}</span>
+                    <em>2011年12月08日(日期)</em>
+                    <a href="#" class="opener"></a>
+                  </figcaption>
+                  
+                  <a href="{{s.project_link}}" class="thumb"><img id='pid' src="/media/{{x.Img}}" alt="Alt text"></a>
+                </figure>
+              {%endfor%}
+                
+              </div>
+            </div>
+            {%endif%}
+            <!-- ENDS home-block -->
+<style type="text/css">
+#pid{margin:0 auto; width:300px; padding:0; height: 188px;}
+#pid img{max-width:300px;width:expression(document.body.clientWidth > 300? "300px": "auto");border:1px dashed #000;}  
+</style>  
+            
+            <!-- home-block -->
+            <div class="home-block">
+              <h2 class="home-block-heading"><span>更多</span></h2>
+              <div class="one-fourth-thumbs clearfix">
+                
+                {%for x in collective%}
+                <figure {%  cycle  '' '' '' 'class="last"' %}>
+                  <figcaption>
+                    <strong>{{x.Name}}</strong>
+                    <span>培训课程：{{x.Course}}
+                    <br>
+                    作品：{{x.Project_name}}
+                    <br>
+                    人数：{{x.Amount}}
+                    </span>
+                    <a href="" class="opener"></a>
+                  </figcaption>
+                  
+                  <a href="/iso/{{forloop.counter}}" class="thumb"><img src="/media/{{x.Img}}" alt="Alt text" id='pp2'></a>
+                </figure>
+                {%endfor%}
+<style>
+#pp2{margin:0 auto; width:220px; padding:0; height: 138px;}
+#pp2 img{max-width:220px;width:expression(document.body.clientWidth > 220? "220px": "auto");border:1px dashed #000;}  
+</style>
+                
+                <a href="#" class="more-link right">更多的项目→</a>
+                
+                
+                
+              </div>
+              
+              
+            </div>
+            <!-- ENDS home-block -->
+                        
+      </div>
+    </div>
+ {% endblock %}</body>
+</html>

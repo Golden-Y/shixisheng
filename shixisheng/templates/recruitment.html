@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+	{% block css %}
+	<meta charset="utf-8">
+  <title>{{navigation_6.name}}</title>
+	<link rel="stylesheet" href="/static/css/zhaopin/style.css">
+	<link rel="stylesheet" href="/static/css/zhaopin/bootstrap.min.css">
+
+	<link href="/static/css/zhaopin/jianli-post_v0.css" rel="stylesheet" />
+
+	<script src="/static/js/tinymce_4.1.7/tinymce/js/tinymce/tinymce.min.js"></script>
+	<script>tinymce.init({selector:'textarea'});</script>
+	{% endblock %}
+</head>
+<body>
+	{% block content %}
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<section>
+		<body class="postFirPage">
+			<div style="height:100px;"></div>
+			<div class="logHeader" id="" style="margin-top:0px;">
+				<div id="" class="loginName">
+					<span class="btn btn-warning">正在创建招聘信息</span>
+				</div>
+			</div>
+			<div class="infoContent">
+				<form action="/zhaopin" method="POST">
+					{%csrf_token%}
+					<div class="perIcon perIcon5" style="display:none"></div>
+					<dl class="">
+						<dt>
+							公司名称
+							<b>*</b>
+						</dt>
+						<dd>
+							<input type="text" name="name" value="{{mingcheng}}"/> 
+							<b style="color:red;">{{a}}</b>
+						</dd>
+					</dl>
+					<dl class="jobType ">
+						<dt>
+							岗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位
+							<b>*</b>
+						</dt>
+						<dd class="" style=""><!--class="zIndex999"-->
+							<input type="text" name="gangwei" value="{{gangwei}}"/> 
+							<b style="color:red;">{{b}}</b>
+						</dd>
+					</dl>
+					<dl class="expSalary ">
+						<dt>
+							薪资范围
+							<b>*</b>
+						</dt>
+						<dd class="">
+
+							<input type="text" name="xinzi" value="2500-3000"></input>
+							<b style="color:red;">{{c}}</b>
+						</dd>
+					</dl>
+					<dl class="nameSex ">
+						<dt>
+							工作地点
+							<b>*</b>
+						</dt>
+						<dd class="">
+							<input type="text" name="didian" value="北京"></input>
+							<b style="color:red;">{{d}}</b>
+						</dd>
+					</dl>
+					<dl class="birTime">
+						<dt>
+							招聘人数
+							<b>*</b>
+						</dt>
+						<dd class="">
+							<input type="text" name="renshu" value="3-5"></input>
+							<b style="color:red;">{{e}}</b>
+						</dd>
+					</dl>
+					<dl class="">
+						<dt>
+							岗位介绍
+							<b>*</b>
+						</dt>
+						<dd class="">
+							<textarea name= "jianjie"></textarea>
+							<b style="color:red;">{{f}}</b>
+						</dd>
+					</dl>
+					<div class="subBtnCon ">
+					<input class="saveResume postBtn" id="btninfo" value="提交信息" type="submit" />
+					</div>
+				</form>
+			</div>
+		</body>
+	</section>
+{% endblock %}
+
+</body>
+</html>

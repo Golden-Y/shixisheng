@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+
+{% block css %}
+  <title>{{navigation_2.name}}</title>
+<!-- Bootstrap Themes -->
+<link href="static/css/allcom/lightGreen-blueGrey-b.css" rel="stylesheet" id="bootstrapTheme">
+<link href="static/css/allcom/lightGreen-blueGrey-m.css" rel="stylesheet" id="mainTheme">
+{% endblock %}
+</head>
+{% block content %}
+<body style="background-color:#FFF8DC;">
+<!-- company -->
+<h2 class="lg-title" style="color:black;font-weight:bold; padding-top:100px; font-family:'幼圆';">合作企业</h2>
+<p class="subtitle-v2 ">我们为您提供最优秀的合作企业</p>
+<div class="container">
+  <div class="panel-group" id="accordion">
+   {%for x in ac%}
+    <div class="panel panel-default" style="margin :0px 0px 20px 0px; border-radius:30px 30px 30px 30px;"> <a data-toggle="collapse" data-parent="#accordion" href="#{{x.id}}">
+      <div class="panel-heading" 
+    style="background:{% cycle '#F26849' '#F2E96D' %}; border-radius:30px 30px 0px 0px;">
+        <h4 class="panel-title"><i class=""></i>
+          <div class="row" style="font-weight:bold;font-family:'幼圆';
+         color:{% cycle 'white' 'black'%}; border-radius:0px 0px 30px 30px; margin:0px 0px 20px 0px;">
+            <div class="col-xs-4" >{{x.name}} </div>
+            <div class="col-xs-4" >{{x.position}}</div>
+            <div class="col-xs-4">{{x.salary}} </div>
+          </div>
+        </h4>
+      </div>
+      </a>
+      <div id="{{x.id}}" class="panel-collapse collapse in"  onClick="window.open('zpxx/{{x.id}}')">
+        <div class="panel-body" style="color:black;padding:1px;">
+          <h5 class="title-sm-v2" style="font-weight: bold;color:black;">公司地址：{{x.place}}</h5>
+          <h5 class="title-sm-v2" style="font-weight: bold;color:black;">招聘人数：{{x.number}}</h5>
+          <p class="title-sm-v2" style="font-weight:bold; color:black;">岗位要求：</p>
+          <ol>
+            {{x.describe|safe}}
+          </ol>
+        </div>
+      </div>
+    </div>
+    {%endfor%} </div>
+</div>
+
+<!--=== SCRIPTS ===--> 
+
+<!-- company --> 
+
+ <!-- head_js -->
+
+</body>
+{% endblock %}
+</html>

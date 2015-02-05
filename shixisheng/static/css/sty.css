@@ -1,0 +1,166 @@
+/************************
+Designed by : http://responsivewebinc.com
+************************/
+
+
+/* Basic CSS starts */
+
+
+
+
+a{
+	color: #888;
+}
+
+a:hover{
+	color: #555;
+	text-decoration: none;
+}
+
+a:hover,a:active,a:focus {
+	outline: 0;
+}
+
+
+
+/* Social Links CSS */
+
+
+
+/* Basic CSS ends */
+
+
+
+
+/* Header */
+/* Navigation bar CSS */
+
+
+
+
+
+
+/* Navbar Header */
+
+.nav-head{
+	background: rgba(0, 0, 0, 0.5);
+	border-top: 3px solid #F76753;
+	width: 100%;
+	position: absolute;
+	z-index: 1000;
+}
+
+.nav-head .navbar-default{
+	background: none;
+	border: 0px;
+	margin-bottom: 0px;
+}
+
+.nav-head .navbar-default .logo img{
+	display: inline;
+	margin: 0;
+}
+
+.nav-head .navbar-default .logo span{
+	color: #fff;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 38px;
+	font-weight: 700;
+	position: relative;
+	top: 5px;
+}
+
+.nav-head .navbar-default .navbar-toggle{
+	margin-top: 20px;
+	background: none;
+}
+
+.nav-head .navbar-default .navbar-collapse{
+	border: 0;
+}
+
+.nav-head .navbar-default .navbar-nav > li a{
+	display: block;
+	margin-top: 15px;
+	font-size: 14px;
+	line-height: 25px;
+	letter-spacing: 0.025em;
+	padding: 12px 20px;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.nav-head .navbar-default .navbar-nav > .active > a{
+	background: none;
+	color: #555;
+}
+
+.nav-head .navbar-default  .navbar-nav > li.open a{
+	background: none;
+	color: #fff;
+}
+
+.nav-head .navbar-default  .navbar-nav > .dropdown .dropdown-menu {
+	top: 65px;
+	left: 10px;
+	border: 0;
+	border-radius: 6px;
+	z-index: 10000;
+	background: rgba(0,0,0,0.7);
+}
+
+.nav-head .navbar-default  .navbar-nav > .dropdown .dropdown-menu:after {
+	bottom: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.nav-head .navbar-default  .navbar-nav > .dropdown .dropdown-menu:after {
+	border-color: rgba(75, 170, 211, 0);
+	border-width: 8px;
+	left: 13%;
+	border-bottom-color: rgba(0,0,0,0.7);
+}
+
+.nav-head .navbar-default  .navbar-nav > li.open ul li{
+	float: none;
+	overflow: hidden;
+}
+
+.nav-head .navbar-default  .navbar-nav > li > a:active,
+.nav-head .navbar-default  .navbar-nav > li > a:focus{
+	background: none !important;
+	color: #fff;
+}
+
+.nav-head .navbar-default  .navbar-nav > li.dropdown ul li a{
+	margin-top: 0px;
+	padding: 2px 10px;
+	font-size: 12px;
+	font-weight: normal;
+	text-transform: none;
+	color: #fff;
+}
+
+.nav-head .navbar-default  .navbar-nav > li.dropdown ul li a:hover{
+	background: #F76753;
+	color: #fff;
+}
+
+.nav-head .navbar-default  .navbar-nav > li.dropdown ul li:first-child{
+	border-top-left-radius: 1px;
+	border-top-right-radius: 1px;
+}
+
+.nav-head .navbar-default  .navbar-nav > li.dropdown ul li:last-child{
+	border-bottom-left-radius: 1px;
+	border-bottom-right-radius: 1px;
+}
+
+  
+ 
