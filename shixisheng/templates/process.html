@@ -4,7 +4,7 @@
 <head>
 
 {% block css %}
-<title>实习流程</title>
+<title>{{process_head.name}}</title>
 		<link href="/static/css/liucheng/style.css" rel="stylesheet" type="text/css"  />
     <script src="/static/css/liucheng/jquery.min.js"></script>
     <script>
@@ -23,8 +23,8 @@
 	
 		  <div class="about" id="about">
 		  	<div class="wrap">
-		  		<h3>实习流程</h3>
-		  		<p class="a">sdfgsdfgsdfgsdfg</p>
+		  		<h3>{{process_head.name}}</h3>
+		  		<p class="a">{{process_head.intr}}</p>
 				<div class="about-time-line">
 				{%for i in p%}
 					<li>

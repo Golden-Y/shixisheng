@@ -42,11 +42,12 @@
     <link rel="stylesheet" media="all" href="/media/cssmoban/css/skin.css"/>
      {%endblock%}
 </head>
-<body>
-  {%block content%}
+{%block content%}
+<body style="background-color:#ffffff">
+  
 
-    <div style="height:100px;"></div>
-  <div id="main" style="padding-top:50px;">  
+    <div style="height:100px;background-color:#ffffff"></div>
+  <div id="main" style="padding-top:50px;background-color:#ffffff">  
       <div class="wrapper">
 
         <!-- slider holder -->
@@ -71,7 +72,7 @@
               <div class="home-slider-clearfix "></div>
               
               <!-- Headline -->
-              <div id="headline" style="height:365px;width:300px;">
+              <div id="headline" style="height:365px;width:300px;background-color:#EBEBE7;">
                 <h1 style="font-size:33px">{{s.Name}}</h1>
                 <p>培训内容：{{s.Course}}</p>
                 <p>欢迎访问《{{s.Name}}》学员的项目<a href="{{s.project_link}}" style="color:#e74b84; font-size:22px;">{{s.project_name}}</a>。</p>
@@ -159,5 +160,6 @@ p{font-size: 20px; }
                         
       </div>
     </div>
- {% endblock %}</body>
+  </body>
+ {% endblock %}
 </html>

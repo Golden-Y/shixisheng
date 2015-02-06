@@ -14,8 +14,11 @@ def home(request):
 	head_r=Text.objects.filter(category="home_roll")
 	company=Company.objects.filter(order='1')
 	teacher=TIntr.objects.all()
-
-	dict_a={"head_r":head_r,"teacher":teacher,"company":company}
+	l=[]
+	for i in company:
+		if i.categories not in l:
+			l.append(i.categories)
+	dict_a={"head_r":head_r,"teacher":teacher,"company":company,"l":l}
 
 	t=Text.objects.all()
 	for i in t:
@@ -66,6 +69,9 @@ def pin(request):
 	return TR(request,"recruitment.html",d)
 def zhaopin(request):
 	d={}
+	t=Text.objects.all()
+	for i in t:
+		d[i.category]=i
 	if request.POST["name"]=="":
 		d['a']="请输入企业名称"
 		return TR(request,'recruitment.html',d)
@@ -111,6 +117,9 @@ def jianli(request):
 	return TR(request,"resume.html",d)
 def jltj(request):
 	d={}
+	t=Text.objects.all()
+	for i in t:
+		d[i.category]=i
 	if request.POST["name"]=="":
 		d['a']="请输入姓名"
 		return TR(request,'resume.html',d)
@@ -130,13 +139,13 @@ def jltj(request):
 		d['zhuanye']=request.POST["zhuanye"]
 		return TR(request,'resume.html',d)
 	if request.POST["nianji"]=="":
-		d['e']="请输入学历/年级"
+		d['f']="请输入学历/年级"
 		d['xingming']=request.POST["name"]
 		d['zhuanye']=request.POST["zhuanye"]
 		d['lianxi']=request.POST["lianxi"]
 		return TR(request,'resume.html',d)
 	if request.POST["jieshao"]=="":
-		d['f']="请输入自我介绍"
+		d['g']="请输入自我介绍"
 		d['xingming']=request.POST["name"]
 		d['zhuanye']=request.POST["zhuanye"]
 		d['lianxi']=request.POST["lianxi"]

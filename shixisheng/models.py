@@ -52,7 +52,7 @@ class Process(models.Model):						#实习流程表
 class head(models.Model):
 	order     = models.CharField(max_length=64,blank=True) 
 	name      = models.CharField(max_length=30)  				
-	intr      = models.CharField(max_length=30)  
+	intr      = models.TextField()  
 	img       = models.ImageField(upload_to='./img/head')
 
 class Problem(models.Model):

@@ -19,7 +19,7 @@
       <div class="ms-slide"> <img src="" data-src="/media/{{i.img}}" alt="Corporate Blog"/>
         <div class="ms-info">
           <h3>{{i.name}}</h3>
-          <p>{{i.intr}}</p>
+          <p>{{i.intr|safe}}</p>
           
         </div>
       </div>
@@ -46,5 +46,14 @@
  
 <script src="/static/js/the8guild/jquery.parallax.min.js"></script> 
 <script src="/static/js/the8guild/scripts.js"></script>
+<script>
+  $(document).ready(function(){
+    function next(){
+      $('.ms-nav-next').click();
+    }
+  setInterval(next,4000);
+});
+
+</script>
 </body>
 </html>

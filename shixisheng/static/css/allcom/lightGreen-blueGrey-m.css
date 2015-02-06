@@ -385,7 +385,6 @@ ul.primary span {
   }
 }
 /* === Links === */
-a:hover,
 a:focus {
   color: #649130;
   text-decoration: none;
@@ -1484,7 +1483,6 @@ button .fa-angle-double-right::before {
   min-height: 1px;
   float: left;
 }
-.lg-tabs li a:hover,
 .lg-tabs li.active a {
   color: #8bc34a;
 }
@@ -1888,25 +1886,24 @@ button .fa-angle-double-right::before {
 .navbar-default .navbar-nav > li > a {
   color: #78909c;
 }
-.navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #546973;
   background-color: rgba(120, 144, 156, 0.15);
 }
 .navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
+
 .navbar-default .navbar-nav > .active > a:focus {
   color: #78909c;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .disabled > a,
-.navbar-default .navbar-nav > .disabled > a:hover,
+
 .navbar-default .navbar-nav > .disabled > a:focus {
   color: rgba(120, 144, 156, 0.75);
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
+
 .navbar-default .navbar-nav > .open > a:focus {
   background-color: #8bc34a;
   color: #fff;
@@ -1944,20 +1941,20 @@ button .fa-angle-double-right::before {
     color: #eceff1;
   }
   .navbar-trn .navbar-text:hover,
-  .navbar-trn .navbar-nav > li > a:hover,
+ 
   .navbar-trn .navbar-text:focus,
   .navbar-trn .navbar-nav > li > a:focus {
     color: #ffffff;
     background: rgba(236, 239, 241, 0.05);
   }
   .navbar-trn .navbar-nav > .open > a,
-  .navbar-trn .navbar-nav > .open > a:hover,
+
   .navbar-trn .navbar-nav > .open > a:focus,
   .navbar-trn .navbar-nav > .disabled > a,
-  .navbar-trn .navbar-nav > .disabled > a:hover,
+
   .navbar-trn .navbar-nav > .disabled > a:focus,
   .navbar-trn .navbar-nav > .active > a,
-  .navbar-trn .navbar-nav > .active > a:hover,
+ 
   .navbar-trn .navbar-nav > .active > a:focus {
     color: #ffffff;
     background: transparent;
@@ -1976,22 +1973,22 @@ button .fa-angle-double-right::before {
   .navbar-trn .navbar-nav > li > a {
     color: #8598a5;
   }
-  .navbar-trn .navbar-nav > li > a:hover,
+
   .navbar-trn .navbar-nav > li > a:focus {
     background: rgba(236, 239, 241, 0.8);
     color: #283136;
   }
   .navbar-trn .navbar-nav > .open > a,
-  .navbar-trn .navbar-nav > .open > a:hover,
+ 
   .navbar-trn .navbar-nav > .open > a:focus,
   .navbar-trn .navbar-nav > .active > a,
-  .navbar-trn .navbar-nav > .active > a:hover,
+
   .navbar-trn .navbar-nav > .active > a:focus {
     color: #ffffff;
     background: #8bc34a;
   }
   .navbar-trn .navbar-nav > .disabled > a,
-  .navbar-trn .navbar-nav > .disabled > a:hover,
+ 
   .navbar-trn .navbar-nav > .disabled > a:focus {
     color: #8598a5;
     background: transparent;
@@ -2007,9 +2004,8 @@ button .fa-angle-double-right::before {
     color: #283136;
   }
   .navbar-trn .open .dropdown-menu > .active > a,
-  .navbar-trn .open .dropdown-menu > .active > a:hover,
+ 
   .navbar-trn .open .dropdown-menu > .active > a:focus,
-  .navbar-trn .open .dropdown-menu > li > a:hover,
   .navbar-trn .open .dropdown-menu > li > a:focus {
     color: #ffffff;
     background: #8bc34a;

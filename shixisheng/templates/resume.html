@@ -18,10 +18,10 @@
   
   <section>
     <body class="postFirPage">
-      <div style="height:60px;"></div>
-      <div class="logHeader" id="" style="margin-top:0px;">
-        <div id="" class="loginName">
-          <span class="btn btn-warning">正在创建简历</span>
+      <div style="height:150px;"></div>
+     <div style="margin-top:0px;border-top: 1.5px dotted #5AA9CE;">
+        <div id="" style=" color: #7c7c7c;">
+          <span style="font-size:40px;background:#ffffff;position: relative;top: -30px;left:42%">发布个人简历</span>
         </div>
       </div>
       <div class="infoContent">
@@ -46,7 +46,7 @@
               女
             </label>
            </dd>
-           {{a}}
+           <b style="color:red;">{{a}}</b>
           </dl>
           <dl class="jobType ">
             <dt>
@@ -56,7 +56,7 @@
             <dd class="" style=""><!--class="zIndex999"-->
               <input type="text" name="zhuanye" value="{{zhuanye}}"/> 
             </dd>
-            {{b}}
+            <b style="color:red;">{{b}}</b>
           </dl>
           <dl class="expSalary ">
             <dt>
@@ -68,7 +68,7 @@
               <input type="text" name="xinzi" value="2500-3000"></input>
 
             </dd>
-            {{c}}
+            <b style="color:red;">{{c}}</b>
           </dl>
           <dl class="nameSex ">
             <dt>
@@ -78,7 +78,7 @@
             <dd class="">
               <input type="text" name="didian" value="北京"></input>
             </dd>
-            {{d}}
+           <b style="color:red;">{{d}}</b>
           </dl>
           <dl class="birTime">
             <dt>
@@ -88,7 +88,7 @@
             <dd class="">
               <input type="text" name="lianxi" value="{{lianxi}}"></input>
             </dd>
-            {{e}}
+            <b style="color:red;">{{e}}</b>
           </dl>
           <dl class="">
             <dt>
@@ -98,6 +98,7 @@
             <dd class="">
               <input type="text" name="nianji" value="{{nianji}}"></input>
             </dd>
+            <b style="color:red;">{{f}}</b>
           </dl>
           <dl class="">
             <dt class="">
@@ -107,9 +108,10 @@
             <dd class="">
               <textarea name= "jieshao"></textarea>
             </dd>
+            <b style="color:red;padding-left:28%;">{{g}}</b>
           </dl>
-          <div class="subBtnCon ">
-          <input class="saveResume postBtn" id="btninfo" value="提交信息" type="submit" />
+          <div class="subBtnCon " style="font-color:#7c7c7c;padding-left:30%;">
+          <input class="btn btn-danger" id="btninfo" style="font-size:30px" value="提交信息" type="submit" />
           </div>
         </form>
       </div>

@@ -6,6 +6,15 @@
     <link href="/static/css/base/font-awesome.min.css" rel="stylesheet">
     <link href="/static/css/sty.css" rel="stylesheet">
     {%block css%} {%endblock%}
+    <style>
+    li.bt:hover
+    {
+      
+      padding-top: 10px;
+      height:20px;
+      background-color:#F76753;
+    }
+    </style>
 </head>
 <body>
 	<div class="nav-head" style="background:#ffffff">
@@ -32,13 +41,13 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul id = 'u' class="nav navbar-nav navbar-right">
-              <li><a style="color:black" href="/">{{navigation_1.name}}</a></li>
-              <li><a style="color:black" href="/allcompany">{{navigation_2.name}}</a></li>
-              <li><a style="color:black" href="/be">{{navigation_3.name}}</a></li>
-              <li><a style="color:black" href="/youxiu">{{navigation_5.name}}</a></li>
-              <li><a style="color:black" href="/pin.html">{{navigation_6.name}}</a></li>
-              <li><a style="color:black" href="/liucheng">{{navigation_7.name}}</a></li>
-              <li><a style="color:black" href="/faq">{{navigation_8.name}}</a></li>
+              <li class="bt"><a style="color:black;" href="/">{{navigation_1.name}}</a></li>
+              <li class="bt"><a style="color:black;" href="/allcompany">{{navigation_2.name}}</a></li>
+              <li class="bt"><a style="color:black;" href="/be">{{navigation_3.name}}</a></li>
+              <li class="bt"><a style="color:black;" href="/youxiu">{{navigation_5.name}}</a></li>
+              <li class="bt"><a style="color:black;" href="/pin.html">{{navigation_6.name}}</a></li>
+              <li class="bt"><a style="color:black;" href="/liucheng">{{navigation_7.name}}</a></li>
+              <li class="bt"><a style="color:black;" href="/faq">{{navigation_8.name}}</a></li>
               
             </ul>
           </div><!-- /.navbar-collapse -->

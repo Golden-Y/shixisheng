@@ -27,12 +27,7 @@
 	<link id="theme" rel="stylesheet" href="/static/css/shapes/color/shapes-blue.css">
 	<link rel="stylesheet" href="/static/css/shapes/style-switcher.css">
 		
-	<!-- ==============================================
-	Fonts
-	=============================================== -->
-	<!-- ==============================================
-	JS
-	=============================================== -->
+
 			
 	<!--[if lt IE 9]>
 		<script src="js/respond.min.js"></script>
@@ -136,17 +131,13 @@
 				<div id="filter-works" class="scrollimation fade-in">
 					<ul data-filter="category">
 						<li class="active">
-							<a href="#" data-category="*">All Categories</a>
+							<a href="#" data-category="*">All Company</a>
 						</li>
+						{%for i in l%}
 						<li>
-							<a href="#" data-category=".互联网">互联网</a>
+							<a href="#" data-category=".{{i}}">{{i}}</a>
 						</li>
-						<li>
-							<a href="#" data-category=".apps">Apps</a>
-						</li>
-						<li>
-							<a href="#" data-category=".ui-kits">UI Kits</a>
-						</li>
+						{%endfor%}
 					</ul>
 				</div><!--End portfolio filters -->
 				<p class="filter-results text-center"><span></span> Works match criteria</p>
@@ -178,7 +169,7 @@
 				
 					<div id="projects-container" class="">					
 						{%for i in company%}
-						<article class="project-item ui-kits apps gallery y2013">
+						<article class="project-item {{i.categories}} y2013">
 							<a href="#">
 								<img class="img-responsive project-thumb" src="media/{{i.log}}" alt=""><!--Project thumb -->
 								
@@ -209,82 +200,6 @@
 							
 						</article>
 						{%endfor%}
-						
-						
-						<article class="project-item web-design ui-kits gallery y2012">
-							<a href="#">
-								<img class="img-responsive project-thumb" src="http://q-themes.net/themes/shapes/assets/projects/own-the-nigh.jpg"  alt=""><!--Project thumb -->
-								
-								<div class="details">
-									<h3 class="project-title">Own the Night</h3><!--Project Title -->
-									<small>Web design, Gallery</small><!--Project Categories -->
-								</div>
-							</a>
-							<!--==== Project Preview ====-->
-							<div class="sr-only">
-								<div class="project-media" data-images="http://q-themes.net/themes/shapes/assets/projects/own-the-nigh-full1.jpg,http://q-themes.net/themes/shapes/assets/projects/own-the-nigh-full2.jpg"></div>
-								<div class="project-attributes">
-									<div class="newline"><span>Date : </span>November 2012</div>
-									<div class="newline"><span>Client : </span>Company SA</div>
-									<div class="newline"><span>Categories : </span>Web Design, UI Kits</div>
-									<div class="newline"><span>Website : </span><a href="#link">www.example.com</a></div>
-								</div>
-							
-								<div class="project-description">
-								
-									<div class="col-md-4">
-										<h2>The Challenge</h2>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
-									</div>
-									
-									<div class="col-md-4">
-										<h2>The Solution</h2>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
-									</div>
-									
-									<div class="col-md-4">
-										<h2>The Result</h2>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
-									</div>
-									
-								</div>
-							</div><!-- End Project Preview -->
-							
-						</article>
-						
-						
-		
-						<article class="project-item apps image y2011">
-							<a href="#">
-								<img class="img-responsive project-thumb" src="http://q-themes.net/themes/shapes/assets/projects/owzzup.jpg"  alt=""><!--Project thumb -->
-								
-								<div class="details">
-									<h3 class="project-title">Owzzup</h3><!--Project Title -->
-									<small>Apps, Image</small><!--Project Categories -->
-								</div>
-							</a>
-							<!--==== Project Preview ====-->
-							<div class="sr-only">
-								<div class="project-media" data-images="http://q-themes.net/themes/shapes/assets/projects/owzzup-full.jpg"></div>
-								<div class="project-attributes">
-									<div class="newline"><span>Date : </span>April 2011</div>
-									<div class="newline"><span>Client : </span>Google Inc.</div>
-									<div class="newline"><span>Categories : </span>Apps</div>
-									<div class="newline"><span>Website : </span><a href="#link">www.example.com</a></div>
-								</div>
-							
-								<div class="project-description">
-								
-									<div class="col-md-12">
-										<h2>The Challenge</h2>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
-									</div>
-									
-								</div>
-							</div><!-- End Project Preview -->
-							
-						</article>
 						
 					</div><!-- End #projects-container --> 
 					
@@ -384,16 +299,6 @@
 									<p class="client">{{i.name}} / <span>{{i.company}}</span></p>
 								</li><!--End Single Testimonial-->
 								{%endfor%}
-								<li>
-									<p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor.</p>
-									<img class="client-img img-circle" src="http://q-themes.net/themes/shapes/assets/client2.jpg" alt="" />
-									<p class="client">John Doe / <span>Microsoft</span></p>
-								</li>
-								<li>
-									<p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor.</p>
-									<img class="client-img img-circle" src="http://q-themes.net/themes/shapes/assets/client3.jpg" alt="" />
-									<p class="client">John Doe / <span>Amazon</span></p>
-								</li>
 							</ul>
 							
 						</div><!-- End slider -->
@@ -491,7 +396,12 @@
 					</div>
 					
 				</div><!-- End row -->
-
+				<div style="text-align:center;border-radius:5px 5px 5px 5px;padding-top:20px;padding-bottom:20px;color:black;" >
+					<span>QQ  :  张老师：1941847311  |手机：153 1153 1358|座机:010-62231977 </span></p>
+					<span>  地址：北京市 昌平区 科星西路 国风美唐 5号楼 806</span>
+					</p>
+					<span>北京顶嵌开源科技有限公司</span>
+				</div>
 				
 			</div><!-- End container -->
 			
